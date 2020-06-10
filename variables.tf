@@ -1,4 +1,4 @@
-variable "network_name"{
+variable "name"{
 
 }
 variable "auto_create_subnetworks" {

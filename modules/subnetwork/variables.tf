@@ -9,6 +9,8 @@ variable "region" {
   default = "us-west1"
   description = "the region where the subnetwork is located"
 }
-
+variable "network_name"{
+  description = "the VPC network where the subnet is located"
+}
 
 
