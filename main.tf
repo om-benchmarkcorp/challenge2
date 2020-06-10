@@ -18,3 +18,15 @@ module "subnetwork"{
     subnet_name = var.name
     network_name = module.vpc.network_name
 }
+
+module "autogroup"{
+    source = "./modules/autogroup"
+    auto_name = var.name
+    subnet_name = module.subnetwork.subnet_name
+}
+
+module "nodes"{
+    source = "./modules/nodes"
+    node_name = var.name
+    subnet_name = module.subnetwork.subnet_name
+}
