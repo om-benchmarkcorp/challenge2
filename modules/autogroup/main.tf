@@ -24,7 +24,7 @@ resource "google_compute_instance_template" "templ" {
   }
 
   network_interface {
-    subnetwork = module.subnetwork.subset_name
+    subnetwork = var.subnet_name
   }
 }
 
